@@ -1,0 +1,382 @@
+<!DOCTYPE html >
+<html lang="en"  data-theme="dark" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- daisy ui and tailwind cdn  --> 
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- google font Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- font awesome link  -->
+    <script src="https://kit.fontawesome.com/985549e602.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="./images/icon.jpeg" type="image/x-icon">
+    <title>Barbers</title>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                color1: '#b8a07a',
+                color2: '#d6a354',
+                text1: '#e1e1e1',
+                bg1: '#1f1f1f',
+              }
+            }
+          }
+        }
+      </script>
+    <style>
+        .font-Poppins{
+            font-family: 'Poppins', sans-serif;
+        }
+        .team-card{
+            position: relative;
+        }
+        .team-icon{
+            position: absolute;
+            top: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap:20px;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+            display: none;
+        }
+        .team-card:hover .team-icon{
+            display: flex;
+        }
+    </style>
+</head>
+<body class="font-Poppins bg-black border-[20px] md:border-[35px]  xl:border-[50px] border-color1 text-text1">
+    <nav class="navbar bg-black bg-opacity-50 z-50 sticky top-0 px-3 md:px-8 lg:px-24 xl:px-36">
+        <div>
+          <div class="dropdown ">
+            <label tabindex="0" class="btn text-white btn-ghost lg:hidden px-0 pr-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+            </label>
+            <ul tabindex="0" class="menu menu-sm text-white font-medium dropdown-content mt-3 z-[1] p-2 shadow rounded-box bg-black bg-opacity-75 w-32">
+                <li><a class="hover:text-color2" href="#home">Home</a></li>
+              <li><a class="hover:text-color2" href="#Service ">Service </a></li>
+              <li><a class="hover:text-color2" href="#Featured ">Featured</a></li>
+              <li><a class="hover:text-color2" href="#Team">Team</a></li>
+              <li><a class="hover:text-color2" href="#Review">Review</a></li>
+              <li><a class="hover:text-color2" href="#blog">blog</a></li>
+            </ul>
+          </div>
+          <a class="btn btn-ghost p-0 normal-case text-2xl md:text-3xl lg:text-4xl text-white font-medium">Barbers</a>
+        </div>
+        <div class=" text-base text-white font-medium hidden lg:flex mx-auto">
+          <ul class="menu menu-horizontal px-1">
+            <li><a class="hover:text-color2" href="#home">Home</a></li>
+              <li><a class="hover:text-color2" href="#Service ">Service </a></li>
+              <li><a class="hover:text-color2" href="#Featured ">Featured</a></li>
+              <li><a class="hover:text-color2" href="#Team">Team</a></li>
+              <li><a class="hover:text-color2" href="#Review">Review</a></li>
+              <li><a class="hover:text-color2" href="#blog">blog</a></li>
+          </ul>
+        </div>
+        <div class="flex justify-center items-center gap-2 md:gap-5 ml-auto">
+            <i class="fa-brands fa-facebook text-color2 md:text-2xl cursor-pointer"></i>
+            <i class="fa-brands fa-instagram text-color2 md:text-2xl cursor-pointer"></i>
+            <i class="fa-brands fa-tiktok text-color2 md:text-2xl cursor-pointer"></i>
+        </div>
+    </nav>
+    <header id="home" class="w-[90%] lg:w-[80%] mx-auto ">
+        <div class="">
+          <div class="flex justify-between items-center flex-col-reverse lg:flex-row gap-10">
+            <div class="flex-1">
+              <h1 class="text-4xl md:text-6xl lg:text-5xl xl:text-7xl font-semibold text-white">
+                Getting you<br>
+                <span class="text-color2">handsome</span> is<br>
+                our goal</h1>
+              <p class="py-4 md:py-6 lg:py-7 text-sm md:text-base xl:text-lg font-medium text-text1">Getting the perfect cut every time of your dreams at the barber shop that cares about your style.</p>
+            <button class="btn bg-color2 border-color-2 text-black hover:bg-transparent hover:text-color2 hover:border-color2 rounded-none mr-2 mb-2">Appointment</button>
+            <button class="btn  bg-transparent text-color2 border-color2 hover:bg-color2 hover:border-color-2 hover:text-black rounded-none ">Contact us</button>
+            </div>
+            <div class="flex-1 ">
+                <div class="flex justify-center items-center">
+                    <img src="./images/hero.png"  / class="w-4/5">
+                </div>
+
+            </div>
+          </div>
+        </div>
+    </header>
+    <section class="flex gap-12 xl:gap-24 flex-col md:flex-row px-[5%] lg:px-[10%] justify-between items-center bg-bg1 py-10 md:py-14 xl:py-20 ">
+        <div class="md:1/3">
+            <h1 class="text-color2 text-9xl md:text-10xl font-bold">15</h1>
+            <h1 class="text-4xl lg:text-5xl font-medium">Years</h1>
+            <h1 class="text-4xl lg:text-5xl font-medium">Experience</h1>
+        </div>
+        <div class="md:2/3 text-text1">
+            <h1 class="text-3xl md:text-4xl lg:text-5xl font-medium mb-5 text-color2">Who we are</h1>
+            <p class="text-xs ml:text-sm lg:text-base font-medium mb-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque culpa unde molestiae corporis amet illo ad magnam est illum saepe et autem, quis blanditiis dolor nam maiores recusandae cupiditate dolore quod repellat labore sequi assumenda quam? Minus deserunt voluptate ea animi aperiam fugiat nihil eligendi distinctio nisi? Corporis, maxime impedit.</p>
+            <button class="btn bg-color2 border-color-2 text-black hover:bg-transparent hover:text-color2 hover:border-color2 rounded-none mr-2 mb-2">More about us</button>
+        </div>
+    </section>
+    <section id="Service" class="text-center px-[5%] lg:px-[10%] my-10 md:my-14 xl:my-20" >
+        <h1 class="text-3xl md:text-4xl lg:text-5xl  font-semibold text-color2 mb-5">Our Service</h1>
+        <p class="text-xs ml:text-sm lg:text-base font-medium md:max-w-xl lg:max-w-3xl mx-auto mb-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni incidunt possimus, ex nihil nesciunt laboriosam eligendi similique earum tempore quidem </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            <div class="card border-2 border-color2 rounded-none px-3 py-4">
+                <figure><img src="./images/1.jpg" alt="Shoes"/></figure>
+                <div class="card-body text-center">
+                    <div class="px-3 py-2 border-4 border-color2 rounded-full m-auto cursor-pointer hover:scale-125 ease-in duration-300">
+                        <i class="fa-solid fa-scissors text-xl text-color2"></i>
+                    </div>
+                    <h2 class="text-2xl text-color2 font-semibold">Shaving</h2>
+                    <p class="text-2xl font-semibold">Charge: <span class="text-color2 font-bold">$55</span></p>
+                </div>
+            </div>  
+            <div class="card border-2 border-color2 rounded-none px-3 py-4">
+                <figure><img src="./images/2.jpg" alt="Shoes"/></figure>
+                <div class="card-body text-center">
+                    <div class="px-3 py-2 border-4 border-color2 rounded-full m-auto cursor-pointer hover:scale-125 ease-in duration-300">
+                        <i class="fa-solid fa-scissors text-xl text-color2"></i>
+                    </div>
+                    <h2 class="text-2xl text-color2 font-semibold">Haircutting</h2>
+                    <p class="text-2xl font-semibold">Charge: <span class="text-color2 font-bold">$75</span></p>
+                </div>
+            </div>  
+            <div class="card border-2 border-color2 rounded-none px-3 py-4">
+                <figure><img src="./images/3.jpg" alt="Shoes"/></figure>
+                <div class="card-body text-center">
+                    <div class="px-3 py-2 border-4 border-color2 rounded-full m-auto cursor-pointer hover:scale-125 ease-in duration-300">
+                        <i class="fa-solid fa-scissors text-xl text-color2"></i>
+                    </div>
+                    <h2 class="text-2xl text-color2 font-semibold">Trimming</h2>
+                    <p class="text-2xl font-semibold">Charge: <span class="text-color2 font-bold">$45</span></p>
+                </div>
+            </div>  
+            <div class="card border-2 border-color2 rounded-none px-3 py-4">
+                <figure><img src="./images/4.jpg" alt="Shoes"/></figure>
+                <div class="card-body text-center">
+                    <div class="px-3 py-2 border-4 border-color2 rounded-full m-auto cursor-pointer hover:scale-125 ease-in duration-300">
+                        <i class="fa-solid fa-scissors text-xl text-color2"></i>
+                    </div>
+                    <h2 class="text-2xl text-color2 font-semibold">Style</h2>
+                    <p class="text-2xl font-semibold">Charge: <span class="text-color2 font-bold">$50</span></p>
+                </div>
+            </div>  
+        </div>
+    </section>
+    <section class="text-center px-[5%] lg:px-[10%] bg-bg1 py-10 md:py-14 xl:py-20">
+        <h1 class="text-3xl md:text-4xl lg:text-5xl  font-semibold text-color2 mb-5 md:mb-7 xl:mb-10" >We are featured on</h1> 
+        <div class="flex justify-center items-center gap-10 flex-wrap text-2xl md:text-4xl xl:text-5xl font-semibold">
+            <h1>SWAGGER</h1>
+            <h1>AnOther</h1>
+            <h1>ELLE</h1>
+            <h1>MAGAZINE</h1>
+            <h1>TIME</h1>
+        </div>
+    </section>
+    <section class=" flex gap-12 flex-col-reverse lg:flex-row px-[5%] lg:px-[10%] my-10 md:my-14 xl:my-20 relative">
+        <div class="flex-1 md:hidden lg:block">
+          <img src="./images/work.jpg" alt="">
+        </div>
+        <div class="flex-1 absolute md:static  top-0 mx-auto">
+            <div class="text-center bg-transparent md:bg-bg1 py-5 xl:py-20 px-2 xl:px-10 w-[95%] md:w-full">
+                <h1 class="text-3xl md:text-4xl lg:text-5xl  font-medium text-color2 mb-5">Working hours</h1>
+            <p class="text-xs ml:text-sm lg:text-base font-medium mb-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, debitis tenetur ratione vel neque asperiores.</p>
+            <div class="flex justify-between items-center mb-4 mt-10">
+                <h1>Weekdays</h1>
+                <h1>9AM-9PM</h1>
+            </div>
+            <hr>
+            <div class="flex justify-between items-center mb-4 mt-10">
+                <h1>Saturday</h1>
+                <h1>10AM-7PM</h1>
+            </div>
+            <hr>
+            <div class="flex justify-between items-center mb-4 mt-10">
+                <h1>Sunday</h1>
+                <h1>Closed</h1>
+            </div>
+            <hr>
+            </div>
+        </div>
+    </section>
+    <section id="Featured" class="text-center px-[5%] lg:px-[10%] bg-bg1 py-10 md:py-14 xl:py-20">
+        <h1 class="text-3xl md:text-4xl lg:text-5xl font-medium mb-5 md:mb-10 text-color2">Featured gallery</h1>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            <img src="./images/4.jpg" alt="">
+            <img src="./images/6.jpg" alt="">
+            <img src="./images/3.jpg" alt="">
+            <img src="./images/5.jpg" alt="">
+            <img src="./images/2.jpg" alt="">
+            <img src="./images/7.jpg" alt="">
+            <img src="./images/1.jpg" alt="">
+            <img src="./images/4.jpg" alt="">
+        </div>
+    </section>
+    <section id="Team" class="text-center px-[5%] lg:px-[10%] my-10 md:my-14 xl:my-20" >
+        <h1 class="text-3xl md:text-4xl lg:text-5xl  font-semibold text-color2 mb-5">Meet our team</h1>
+        <p class="text-xs ml:text-sm lg:text-base font-medium md:max-w-xl lg:max-w-3xl mx-auto mb-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni incidunt possimus, ex nihil nesciunt laboriosam eligendi similique earum tempore quidem </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            <div class="card border-2 border-color2 rounded-none px-3 ">
+                <div class="team-card">
+                    <figure><img src="./images/hero.png" alt="Shoes" /></figure>
+                    <div class="team-icon bg-black bg-opacity-50">
+                        <i class="fa-brands fa-facebook text-color2 md:text-2xl cursor-pointer"></i>
+                        <i class="fa-brands fa-instagram text-color2 md:text-2xl cursor-pointer"></i>
+                        <i class="fa-brands fa-tiktok text-color2 md:text-2xl cursor-pointer"></i>
+                    </div>
+                </div>
+                <div class="card-body text-center">
+                    <h2 class="text-2xl font-bold">Jeremy Jorge</h2>
+                    <p>Owner & head barber</p>
+                </div>
+            </div>   
+            <div class="card border-2 border-color2 rounded-none px-3 ">
+                <div class="team-card">
+                    <figure><img src="./images/hero2.png" alt="Shoes" /></figure>
+                    <div class="team-icon bg-black bg-opacity-50">
+                        <i class="fa-brands fa-facebook text-color2 md:text-2xl cursor-pointer"></i>
+                        <i class="fa-brands fa-instagram text-color2 md:text-2xl cursor-pointer"></i>
+                        <i class="fa-brands fa-tiktok text-color2 md:text-2xl cursor-pointer"></i>
+                    </div>
+                </div>
+                <div class="card-body text-center">
+                    <h2 class="text-2xl font-bold">Tyrese Mario</h2>
+                    <p>Master barber</p>
+                </div>
+            </div>   
+            <div class="card border-2 border-color2 rounded-none px-3 ">
+                <div class="team-card">
+                    <figure><img src="./images/hero3.png" alt="Shoes" /></figure>
+                    <div class="team-icon bg-black bg-opacity-50">
+                        <i class="fa-brands fa-facebook text-color2 md:text-2xl cursor-pointer"></i>
+                        <i class="fa-brands fa-instagram text-color2 md:text-2xl cursor-pointer"></i>
+                        <i class="fa-brands fa-tiktok text-color2 md:text-2xl cursor-pointer"></i>
+                    </div>
+                </div>
+                <div class="card-body text-center">
+                    <h2 class="text-2xl font-bold">Kendrick </h2>
+                    <p>Master barber</p>
+                </div>
+            </div>   
+            <div class="card border-2 border-color2 rounded-none px-3 ">
+                <div class="team-card">
+                    <figure><img src="./images/hero4.png" alt="Shoes" /></figure>
+                    <div class="team-icon bg-black bg-opacity-50">
+                        <i class="fa-brands fa-facebook text-color2 md:text-2xl cursor-pointer"></i>
+                        <i class="fa-brands fa-instagram text-color2 md:text-2xl cursor-pointer"></i>
+                        <i class="fa-brands fa-tiktok text-color2 md:text-2xl cursor-pointer"></i>
+                    </div>
+                </div>
+                <div class="card-body text-center">
+                    <h2 class="text-2xl font-bold">Soren Derrick</h2>
+                    <p>Master barber</p>
+                </div>
+            </div>   
+        </div>
+    </section>
+    <section id="Review" class="flex gap-12 xl:gap-24 flex-col md:flex-row px-[5%] lg:px-[10%] justify-between items-center bg-bg1 py-10 md:py-14 xl:py-20 ">
+        <div class="flex-1">
+            <img src="images/client.jpg" alt="">
+        </div>
+        <div class="flex-1">
+            <h1 class="text-3xl md:text-4xl lg:text-5xl font-medium text-color2">Client says</h1>
+            <p class="text-xs ml:text-sm lg:text-base font-medium my-5 md:my-7 xl:my-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum neque, sunt nobis nesciunt vitae natus ab itaque aliquam sapiente! Distinctio, illum suscipit? Molestiae natus sit ex at quam. Id, deserunt, commodi quasi, debitis dolore reprehenderit veniam aut similique accusamus tempora placeat rem officia nisi perspiciatis eveniet cumque quos laborum! Quod hic repellendus repudiandae ut explicabo iste eius? Ipsam, quos suscipit!</p>
+            <h2 class="text-2xl font-bold">-Kendrick </h2>
+        </div>
+    </section>
+    <section id="blog" class="text-center px-[5%] lg:px-[10%] my-10 md:my-14 xl:my-20" >
+        <h1 class="text-3xl md:text-4xl lg:text-5xl  font-semibold text-color2 mb-5">Latest news & blog</h1>
+        <p class="text-xs ml:text-sm lg:text-base font-medium md:max-w-xl lg:max-w-3xl mx-auto mb-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni incidunt possimus, ex nihil nesciunt laboriosam eligendi similique earum tempore quidem </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+            <div class="card border-2 border-color2 rounded-none px-3 py-4">
+                <figure><img src="./images/n1.jpg" alt="Shoes"/></figure>
+                <div class="card-body text-start px-0">
+                    <p class="text-xl md:text-2xl font-bold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, aliquam......</p>
+                </div>
+                <div class="flex justify-between items-center">
+                    <div class="text-base flex justify-start items-center gap-2 cursor-pointer">
+                        <h2>Read More</h2>
+                        <i class="fa-solid fa-arrow-right-long text-color2 mt-1"></i>
+                    </div>
+                    <div class=" flex justify-start items-center gap-2 text-color2 text-xl ">
+                        <i class="fa-solid fa-heart cursor-pointer"></i>
+                        <i class="fa-solid fa-comment cursor-pointer"></i>
+                        <i class="fa-solid fa-share-from-square cursor-pointer"></i>
+                    </div>
+                </div>
+            </div>   
+            <div class="card border-2 border-color2 rounded-none px-3 py-4">
+                <figure><img src="./images/n2.jpeg" alt="Shoes"/></figure>
+                <div class="card-body text-start px-0">
+                    <p class="text-xl md:text-2xl font-bold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, aliquam......</p>
+                </div>
+                <div class="flex justify-between items-center">
+                    <div class="text-base flex justify-start items-center gap-2 cursor-pointer">
+                        <h2>Read More</h2>
+                        <i class="fa-solid fa-arrow-right-long text-color2 mt-1"></i>
+                    </div>
+                    <div class=" flex justify-start items-center gap-2 text-color2 text-xl ">
+                        <i class="fa-solid fa-heart cursor-pointer"></i>
+                        <i class="fa-solid fa-comment cursor-pointer"></i>
+                        <i class="fa-solid fa-share-from-square cursor-pointer"></i>
+                    </div>
+                </div>
+            </div>   
+            <div class="card border-2 border-color2 rounded-none px-3 py-4">
+                <figure><img src="./images/n3.jpeg" alt="Shoes"/></figure>
+                <div class="card-body text-start px-0">
+                    <p class="text-xl md:text-2xl font-bold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, aliquam......</p>
+                </div>
+                <div class="flex justify-between items-center">
+                    <div class="text-base flex justify-start items-center gap-2 cursor-pointer">
+                        <h2>Read More</h2>
+                        <i class="fa-solid fa-arrow-right-long text-color2 mt-1"></i>
+                    </div>
+                    <div class=" flex justify-start items-center gap-2 text-color2 text-xl ">
+                        <i class="fa-solid fa-heart cursor-pointer"></i>
+                        <i class="fa-solid fa-comment cursor-pointer"></i>
+                        <i class="fa-solid fa-share-from-square cursor-pointer"></i>
+                    </div>
+                </div>
+            </div>   
+        </div>
+    </section>
+    <footer class="footer px-[5%] lg:px-[10%] py-10 md:py-14 xl:py-20 bg-bg1 text-text1">
+        <div>
+          <span class="footer-title">Services</span> 
+          <a class="link link-hover">Branding</a> 
+          <a class="link link-hover">Design</a> 
+          <a class="link link-hover">Marketing</a> 
+          <a class="link link-hover">Advertisement</a>
+        </div> 
+        <div>
+          <span class="footer-title">Company</span> 
+          <a class="link link-hover">About us</a> 
+          <a class="link link-hover">Contact</a> 
+          <a class="link link-hover">Jobs</a> 
+          <a class="link link-hover">Press kit</a>
+        </div> 
+        <div>
+          <span class="footer-title">Legal</span> 
+          <a class="link link-hover">Terms of use</a> 
+          <a class="link link-hover">Privacy policy</a> 
+          <a class="link link-hover">Cookie policy</a>
+        </div>
+      </footer> 
+      <hr>
+      <footer class="footer px-[5%] lg:px-[10%] py-4 bg-bg1 text-text1">
+        <div class="items-center grid-flow-col">
+            <h1 class="normal-case text-2xl md:text-3xl lg:text-4xl text-color2 font-medium">Barbers</h1>
+        </div> 
+        <div class="md:place-self-center md:justify-self-end">
+            <div class="flex justify-center items-center gap-2 md:gap-5 ml-auto">
+                <i class="fa-brands fa-facebook text-color2 md:text-2xl cursor-pointer"></i>
+                <i class="fa-brands fa-instagram text-color2 md:text-2xl cursor-pointer"></i>
+                <i class="fa-brands fa-tiktok text-color2 md:text-2xl cursor-pointer"></i>
+            </div>
+        </div>
+      </footer>
+</body>
+</html>
